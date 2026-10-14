@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "千川视频数据拉取（三合一）",
+  "version": "3.1.6",
+  "description": "三合一拉取千川引流直播间、挂车视频与乘方视频的素材明细及汇总数据。",
+  "permissions": ["activeTab", "downloads", "storage", "scripting"],
+  "host_permissions": ["https://qianchuan.jinritemai.com/*"],
+  "action": {
+    "default_title": "千川视频数据拉取（三合一）",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://qianchuan.jinritemai.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

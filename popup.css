@@ -1,0 +1,24 @@
+:root { color-scheme: light; font-family: system-ui, "Microsoft YaHei", sans-serif; }
+body { width: 390px; margin: 0; background: #f5f7fb; color: #1f2937; }
+main { padding: 18px; }
+h1 { margin: 0 0 8px; font-size: 18px; }
+p { margin: 0 0 14px; color: #5b6472; font-size: 13px; line-height: 1.55; }
+label { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; font-size: 13px; }
+input { width: 72px; padding: 7px; border: 1px solid #d9dfeb; border-radius: 7px; }
+input[type="date"] { box-sizing: border-box; width: 158px; }
+select { width: 210px; padding: 8px; border: 1px solid #d9dfeb; border-radius: 7px; background: white; }
+.mode-label { margin: 12px 0; font-weight: 700; }
+.check { justify-content: flex-start; gap: 8px; }
+.check input { width: auto; }
+.date-panel { margin: -2px 0 14px; padding: 10px; border: 1px solid #d9dfeb; border-radius: 8px; background: white; }
+.range-row { display: flex; align-items: center; justify-content: space-between; gap: 6px; }
+.range-row span { color: #6b7280; }
+.presets { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-top: 9px; }
+.presets button { padding: 6px 3px; border: 1px solid #d9dfeb; border-radius: 6px; background: #f8fafc; color: #374151; font-size: 12px; font-weight: 400; }
+.presets button:hover { border-color: #2563eb; color: #2563eb; }
+.date-panel.disabled { opacity: .55; }
+button { width: 100%; border: 0; border-radius: 8px; padding: 10px 12px; background: #2563eb; color: white; font-weight: 700; cursor: pointer; }
+button:disabled { opacity: .6; cursor: wait; }
+.secondary { margin-top: 8px; background: white; color: #2563eb; border: 1px solid #93b4f5; }
+.danger { margin-top: 8px; background: #dc2626; }
+#status { margin-top: 12px; min-height: 38px; padding: 9px; border-radius: 7px; background: white; color: #4b5563; font-size: 12px; line-height: 1.5; }

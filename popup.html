@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>千川视频数据拉取（三合一）</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main>
+    <h1>千川视频数据拉取（三合一）</h1>
+    <label class="mode-label">拉取类型
+      <select id="mode">
+        <option value="live">引流直播间</option>
+        <option value="product">挂车视频</option>
+        <option value="chengfang">乘方视频</option>
+      </select>
+    </label>
+    <label class="mode-label">素材范围
+      <select id="materialScope">
+        <option value="published">日期内新发布素材</option>
+        <option value="all">所选统计日期的全部素材</option>
+      </select>
+    </label>
+    <p>“新发布素材”按创建时间筛选；“全部素材”保留所选日期的数据指标，但不限制素材创建时间。</p>
+    <label class="check"><input id="applyDate" type="checkbox"> 应用以下日期范围</label>
+    <section class="date-panel" aria-label="日期范围选择">
+      <div class="range-row">
+        <input id="startDate" type="date" aria-label="开始日期" disabled>
+        <span>～</span>
+        <input id="endDate" type="date" aria-label="结束日期" disabled>
+      </div>
+      <div class="presets" aria-label="快捷日期范围">
+        <button type="button" data-range="today">今天</button>
+        <button type="button" data-range="yesterday">昨天</button>
+        <button type="button" data-range="3">最近3天</button>
+        <button type="button" data-range="7">最近7天</button>
+        <button type="button" data-range="15">最近15天</button>
+        <button type="button" data-range="30">最近30天</button>
+        <button type="button" data-range="lastWeek">上周</button>
+        <button type="button" data-range="thisMonth">本月</button>
+      </div>
+    </section>
+    <label class="check"><input id="clearFilters" type="checkbox"> 一键清空全部素材筛选（不勾选则沿用当前维度）</label>
+    <button id="start">开始抓取并导出 CSV</button>
+    <button id="stop" class="danger" hidden>停止读取并生成诊断</button>
+    <button id="diagnostics" class="secondary" hidden>下载上次诊断报告</button>
+    <div id="status" role="status">请先打开千川“素材 → 视频”页面。</div>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>
